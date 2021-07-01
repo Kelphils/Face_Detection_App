@@ -126,9 +126,9 @@ class App extends Component {
       <Particles className= 'particles'
       params = {particleOptions}/>
       <Navigation  userSignedIn= {this.state.userSignedIn} onRouteChange= {this.onRouteChange}/>
+      <Logo />
       { this.state.route === 'home'
        ? <div>
-       <Logo />
        <Rank  name= {this.state.user.name} entries= {this.state.user.entries} />
        <ImageLinkForm onInputChange={this.onInputChange} onPictureSubmit={this.onPictureSubmit}/>
        <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
