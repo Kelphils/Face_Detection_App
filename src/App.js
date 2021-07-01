@@ -80,7 +80,7 @@ class App extends Component {
 
   onPictureSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch('https://myfacedetectjs.herokuapp.com/imageUrl', {
+    fetch('https://myfacedetectjs.herokuapp.com/image', {
       method: 'post',
       headers: {'content-Type' : 'application/json'},
       body: JSON.stringify({
@@ -90,7 +90,7 @@ class App extends Component {
     .then(response => response.json())
       .then(response =>  {
         if (response) {
-          fetch('https://myfacedetectjs.herokuapp.com:3000/image', {
+          fetch('https://myfacedetectjs.herokuapp.com/image', {
             method: 'put',
             headers: {'content-Type' : 'application/json'},
             body: JSON.stringify({
